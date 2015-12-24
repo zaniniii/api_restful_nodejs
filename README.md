@@ -2,7 +2,10 @@
 
 <p>Api desenvolvida a titulo de estudos.</p>
 
-<h3>Depend6encias Utilizadas</h3>
+<h3>Instalação</h3>
+<p>Basta rodar o comando "npm install" na raiz do diretorio.</p>
+
+<h3>Dependências Utilizadas</h3>
 
 <ul>
 	<li>Express: "^4.13.3"</li> 
