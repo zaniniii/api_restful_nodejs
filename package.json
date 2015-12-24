@@ -1,0 +1,20 @@
+{
+  "name": "api_node_js",
+  "version": "0.0.1",
+  "description": "Exemplo Restful Node",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "Restful"
+  ],
+  "author": "Luiz Carlos Zanini",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.14.2",
+    "express": "^4.13.3",
+    "mongoose": "^4.3.3",
+    "validator": "^4.4.0"
+  }
+}
