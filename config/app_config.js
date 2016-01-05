@@ -1,6 +1,8 @@
 
 var express = require('express');
 
+var oauthserver = require('oauth2-server');
+
 var app = module.exports = express();
 
 var bodyParser = require('body-parser');
@@ -23,3 +25,14 @@ app.use(allowCors);
 //Acionando o Json com BodyParse
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended : true}));
+
+//Acionando Oauth 2
+app.oauth = oauthserver({
+  model: {}, // See below for specification 
+  grants: ['password'],
+  debug: true
+});
+
+app.all('/oauth/token', app.oauth.grant());
+
+app.use(app.oauth.errorHandler());

@@ -14,7 +14,7 @@ exports.list = function(callback){
 			callback(users);
 		}
 
-	});
+	}).select("-password");
 };
 
 //Exibindo Usuário

@@ -5,8 +5,6 @@ var validator = require('validator');
 //importo o controller Users
 var userController = require('../controller/userController.js');
 
-
-
 //Listando Usuarios
 router.get('/', function(req, res){
 
