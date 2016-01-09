@@ -1,4 +1,5 @@
 var express = require('express');
+var md5 = require('md5');
 var router = express.Router();
 var validator = require('validator');
 
@@ -24,7 +25,7 @@ router.post('/', function(req, res){
 
 		'fullname' : fullname,
 		'email': email,
-		'password': password,
+		'password': md5(password),
 		'created_at' : new Date()
 	}
 
@@ -43,7 +44,7 @@ router.put('/', function(req, res){
 	var editUser = {
 		'fullname' : fullname,
 		'email': email,
-		'password': password
+		'password': md5(password)
 	}
 
 	userController.update(id, editUser, function(resp){

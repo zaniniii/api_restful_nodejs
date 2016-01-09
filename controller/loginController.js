@@ -28,5 +28,5 @@ exports.logar = function(email, password, callback){
 
 		}
 
-	});
+	}).select('-password');
 };

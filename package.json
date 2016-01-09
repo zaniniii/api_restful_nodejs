@@ -14,6 +14,7 @@
   "dependencies": {
     "body-parser": "^1.14.2",
     "express": "^4.13.3",
+    "md5": "^2.0.0",
     "mongoose": "^4.3.3",
     "validator": "^4.4.0"
   }

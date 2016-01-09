@@ -1,4 +1,5 @@
 var express = require('express');
+var md5 = require('md5');
 var router = express.Router();
 var validator = require('validator');
 
@@ -12,7 +13,7 @@ router.post('/', function(req, res){
 	var password = validator.trim(validator.escape(req.param('password')));
 
 
-	loginController.logar(email, password, function(resp){
+	loginController.logar(email, md5(password), function(resp){
 		res.json(resp);
 	});
 });

@@ -11,6 +11,7 @@
 	<li>body-parser: "^1.14.2"</li>
     <li>express: "^4.13.3"</li>
     <li>mongoose: "^4.3.3"</li>
+    <li>md5: "^2.0.0"</li>
     <li>oauth2-server: "^2.4.1" (Em andamento)</li>
     <li>validator: "^4.4.0"</li>
 
