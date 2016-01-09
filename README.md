@@ -21,6 +21,7 @@
 <h3>Em desenvolvimento</h3>
 <ul>
 	<li>Autenticação com Oauth</li>
+	<li>Login</li>
 </ul>
 
 
