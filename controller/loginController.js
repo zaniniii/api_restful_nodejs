@@ -3,30 +3,36 @@
 var db = require('../config/db_config.js');
 
 //Modulo usuario
-var User = require('../models/user.js');
+var User = require('../models/user');
 
 //Logar
 exports.logar = function(email, password, callback){
 
-	User.findOne({email, password}, function(error, user){
+	User.findOne({email}, function(error, user){
 
-		if(error){
+		if(!user){
 			
-			callback({error : 'Não foi possível efetuar o login'});
+			return callback({error : true,
+						message : 'Usuário inexistente.'});
 
 		}else{
 
-			if(user){
-				
-				callback({user});
+			user.verifyPassword(password, function(err, isMatch){
 
-			}else{
+				if(err){
+					return callback(err);
+				}
 
-				callback({msg : 'Login inválido.'});
+				if(!isMatch){
+					return callback({error : true,
+						message : 'Login inválido.'});
+				}
 
-			}
+				return callback(user);
+
+			});
 
 		}
 
-	}).select('-password');
+	});
 };

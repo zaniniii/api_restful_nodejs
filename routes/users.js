@@ -1,5 +1,4 @@
 var express = require('express');
-var md5 = require('md5');
 var router = express.Router();
 var validator = require('validator');
 
@@ -11,50 +10,57 @@ router.get('/', function(req, res){
 
 	userController.list(function(resp){
 		res.json(resp);
-	})});
+	})
+});
 
 //Adicionar Usuario
 router.post('/', function(req, res){
 
-	var fullname = validator.trim(validator.escape(req.param('fullname')));
-	var email = validator.trim(validator.escape(req.param('email')));
-	var password = validator.trim(validator.escape(req.param('password')));
+	var name = validator.trim(validator.escape(req.body.name));
+	var email = validator.trim(validator.escape(req.body.email));
+	var password = validator.trim(validator.escape(req.body.password));
 
 
 	var user = {
 
-		'fullname' : fullname,
+		'name' : name,
 		'email': email,
-		'password': md5(password),
+		'password': password,
 		'created_at' : new Date()
 	}
 
 	userController.save(user, function(resp){
 		res.json(resp);
-	});});
+	});
+});
 
 //Editar Usuario
 router.put('/', function(req, res){
 
-	var id = validator.trim(validator.escape(req.param('id')));
-	var fullname = validator.trim(validator.escape(req.param('fullname')));
-	var email = validator.trim(validator.escape(req.param('email')));
-	var password = validator.trim(validator.escape(req.param('password')));
+
+	var id = validator.trim(validator.escape(req.body.id));
+
+	var name = validator.trim(validator.escape(req.body.name));
+	var email = validator.trim(validator.escape(req.body.email));
+	var password = validator.trim(validator.escape(req.body.password));
 
 	var editUser = {
-		'fullname' : fullname,
+		'name' : name,
 		'email': email,
-		'password': md5(password)
+		'password': password,
+		'updated_at' : new Date()
 	}
 
 	userController.update(id, editUser, function(resp){
 		res.json(resp);
-	});});
+	});
+
+});
 
 //Info Usuario
 router.get('/:id', function(req, res){
 
-	var id = validator.trim(validator.escape(req.param('id')));
+	var id = validator.trim(validator.escape(req.body.id));
 
 	userController.user(id, function(resp){
 		res.json(resp);
@@ -63,7 +69,7 @@ router.get('/:id', function(req, res){
 // //Deletar Usuario
 router.delete('/:id', function(req, res){
 
-	var id = validator.trim(validator.escape(req.param('id')));
+	var id = validator.trim(validator.escape(req.body.id));
 
 	userController.delete(id, function(resp){
 		res.json(resp);

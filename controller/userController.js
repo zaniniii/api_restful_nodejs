@@ -1,7 +1,7 @@
 var db = require('../config/db_config.js');
 
 //Modulo usuario
-var User = require('../models/user.js');
+var User = require('../models/user');
 
 //Listando os usuários
 exports.list = function(callback){
@@ -33,12 +33,12 @@ exports.user = function(id, callback){
 
 //Add Usuário
 exports.save = function(user, callback){
-
+	
 	new User(user).save(function(error, user){
 
 		if(error){
 			
-			callback({error : 'Não foi possível salvar o usuário'});
+			callback(error);
 
 		}else{
 
@@ -54,6 +54,9 @@ exports.update = function(id, editUser, callback){
 
 	User.findById(id ,function(error, user){
 
+
+		console.log(user);
+
 		//Verifico se encontrou algum usuario
 		if(error){
 			callback({error : 'Usuário não encontrado'});
@@ -61,8 +64,8 @@ exports.update = function(id, editUser, callback){
 		}
 
 		//Confiro qual campo realmente foi alterado
-		if(editUser.fullname){
-			user.fullname = editUser.fullname;
+		if(editUser.name){
+			user.name = editUser.name;
 		}
 
 		if(editUser.email){
@@ -72,6 +75,8 @@ exports.update = function(id, editUser, callback){
 		if(editUser.password){
 			user.password = editUser.password;
 		}
+
+		user.updated_at = new Date();
 
 		user.save(function(error, user){
 			if(error){
