@@ -54,11 +54,8 @@ exports.update = function(id, editUser, callback){
 
 	User.findById(id ,function(error, user){
 
-
-		console.log(user);
-
 		//Verifico se encontrou algum usuario
-		if(error){
+		if(!user){
 			callback({error : 'Usuário não encontrado'});
 			return;
 		}

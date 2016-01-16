@@ -1,5 +1,5 @@
 
-var db_string = "mongodb://127.0.0.1:27017/modelo_restfull";
+var db_string = "mongodb://localhost:27017/modelo_restfull";
 
 var mongoose = require('mongoose').connect(db_string);
 
