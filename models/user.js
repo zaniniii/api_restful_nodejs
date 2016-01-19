@@ -21,6 +21,10 @@ var UserSchema = new mongoose.Schema({
 			required : true
 		},
 
+		token : {
+			type : String
+		},
+
 		created_at :{
 			type : Date,		
 		},
@@ -34,7 +38,10 @@ var UserSchema = new mongoose.Schema({
 
 //Executa antes de salvar o usuário
 UserSchema.pre('save', function(callback) {
+
+
   var user = this;
+
 
   if (!user.isModified('password')) return callback();
 

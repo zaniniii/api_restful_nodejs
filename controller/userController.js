@@ -93,7 +93,7 @@ exports.delete = function(id, callback){
 	User.findById(id, function(error, user){
 
 		if(error){
-			callback({error : 'Não foi possível deletar o usuário.'});
+			callback({error : error});
 		}else{
 			user.remove(function(error){
 				if(!error){

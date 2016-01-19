@@ -60,7 +60,7 @@ router.put('/', function(req, res){
 //Info Usuario
 router.get('/:id', function(req, res){
 
-	var id = validator.trim(validator.escape(req.body.id));
+	var id = validator.trim(validator.escape(req.params.id));
 
 	userController.user(id, function(resp){
 		res.json(resp);
@@ -69,7 +69,7 @@ router.get('/:id', function(req, res){
 // //Deletar Usuario
 router.delete('/:id', function(req, res){
 
-	var id = validator.trim(validator.escape(req.body.id));
+	var id = validator.trim(validator.escape(req.params.id));
 
 	userController.delete(id, function(resp){
 		res.json(resp);

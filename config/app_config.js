@@ -1,5 +1,7 @@
 
 var express = require('express');
+var morgan = require('morgan'); //logs
+var fs = require('fs');  // file system
 
 var app = module.exports = express();
 
@@ -13,6 +15,13 @@ var allowCors = function(req, res, next){
   	res.header('Access-Control-Allow-Credentials', 'true');
 	next();
 };
+
+
+
+//save file log
+var accessLogStream = fs.createWriteStream(__dirname + '/../log/access.log', {flags: 'a'});
+// setup the logger
+app.use(morgan('combined', {stream: accessLogStream}));
 
 
 
