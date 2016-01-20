@@ -16,19 +16,14 @@ var allowCors = function(req, res, next){
 	next();
 };
 
-
-
-//save file log
+//Salvando log
 var accessLogStream = fs.createWriteStream(__dirname + '/../log/access.log', {flags: 'a'});
-// setup the logger
 app.use(morgan('combined', {stream: accessLogStream}));
 
-
-
 app.listen(5000);
-
 app.use(allowCors);
 
 //Acionando o Json com BodyParse
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended : true}));
+

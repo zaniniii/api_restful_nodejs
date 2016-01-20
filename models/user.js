@@ -21,16 +21,19 @@ var UserSchema = new mongoose.Schema({
 			required : true
 		},
 
-		token : {
-			type : String
-		},
+		token: {
+	        type: String,
+	        //unique: true,
+	        //required: true
+    	},
 
 		created_at :{
-			type : Date,		
+			type: Date,
+        	default: Date.now		
 		},
 
 		updated_at :{
-			type : Date,		
+			type: Date,
 		}
 
 	});
