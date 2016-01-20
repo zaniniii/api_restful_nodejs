@@ -25,5 +25,5 @@
 
 <h3>Colaboração</h3>
 <ul>
-	<li>Slack:#api-nodejs<br><small>Basta realizar o commit com  #api-nodejs.</small></li>
+	<li>Slack:#api-nodejs<br></li>
 </ul>
