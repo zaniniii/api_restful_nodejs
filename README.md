@@ -23,4 +23,7 @@
 	<li>Autenticação com Oauth</li>
 </ul>
 
-
+<h3>Colaboração</h3>
+<ul>
+	<li>Slack:#api-nodejs</li>
+</ul>
