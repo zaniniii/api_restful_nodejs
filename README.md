@@ -2,6 +2,16 @@
 
 <p>Api desenvolvida a titulo de estudos.</p>
 
+<h3>Requisitos</h3>
+<ul>
+    <li>MongoDB</li>
+    <li>Nodejs</li>
+    <li>NPM</li>
+</ul>
+<br/>
+<small>Obs.:Todos instalados e funcionando corretamente.</small>
+
+
 <h3>Instalação</h3>
 <p>Basta rodar o comando "npm install" na raiz do diretorio.</p>
 
