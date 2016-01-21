@@ -24,3 +24,8 @@
 <ul>
 	<li>Slack:#api-nodejs<br></li>
 </ul>
+
+<h3>Em desenvolvimento</h3>
+<ul>
+    <li>Criar arquivo de configuração</li>
+</ul>
