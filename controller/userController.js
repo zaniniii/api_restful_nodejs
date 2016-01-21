@@ -92,8 +92,8 @@ exports.delete = function(id, callback){
 
 	User.findById(id, function(error, user){
 
-		if(error){
-			callback({error : error});
+		if(!user){
+			callback({error : true, message : 'Usuário inexistente.'});
 		}else{
 			user.remove(function(error){
 				if(!error){

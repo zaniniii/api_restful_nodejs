@@ -7,7 +7,7 @@ var validaJWT = require('../config/validaJWT');
 var userController = require('../controller/userController.js');
 
 //Listando Usuarios
-router.get('/', validaJWT, function(req, res){
+router.get('/', function(req, res){
 
 	userController.list(function(resp){
 		res.json(resp);
@@ -15,7 +15,7 @@ router.get('/', validaJWT, function(req, res){
 });
 
 //Adicionar Usuario
-router.post('/', function(req, res){
+router.post('/', validaJWT, function(req, res){
 
 	var name = validator.trim(validator.escape(req.body.name));
 	var email = validator.trim(validator.escape(req.body.email));
@@ -36,7 +36,7 @@ router.post('/', function(req, res){
 });
 
 //Editar Usuario
-router.put('/', function(req, res){
+router.put('/', validaJWT, function(req, res){
 
 
 	var id = validator.trim(validator.escape(req.body.id));
@@ -68,7 +68,7 @@ router.get('/:id', function(req, res){
 	});});
 
 // //Deletar Usuario
-router.delete('/:id', function(req, res){
+router.delete('/:id', validaJWT, function(req, res){
 
 	var id = validator.trim(validator.escape(req.params.id));
 
