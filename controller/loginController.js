@@ -1,9 +1,17 @@
 
-//Configuração DD
+//Configuração DB
 var db = require('../config/db_config.js');
 
 //Modulo usuario
 var User = require('../models/user');
+
+//Json Web Token
+var jwt = require('jwt-simple');
+
+//Moment
+var moment = require('moment');
+
+var segredo = 'za9/*-+.798585lczm798585';
 
 //Logar
 exports.logar = function(email, password, callback){
@@ -28,7 +36,22 @@ exports.logar = function(email, password, callback){
 						message : 'Login inválido.'});
 				}
 
-				return callback(user);
+
+
+				var expires = moment().add(7,'days').valueOf();
+    			
+    			var token = jwt.encode({
+	      			iss: user._id,
+	      			exp: expires
+    			}, segredo);
+
+    			var dadosLogado = {
+    				user : user,
+    				token : token,
+    				token_expires : expires
+    			}
+
+				return callback(dadosLogado);
 
 			});
 

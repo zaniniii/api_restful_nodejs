@@ -1,12 +1,13 @@
 var express = require('express');
 var router = express.Router();
 var validator = require('validator');
+var validaJWT = require('../config/validaJWT');
 
 //importo o controller Users
 var userController = require('../controller/userController.js');
 
 //Listando Usuarios
-router.get('/', function(req, res){
+router.get('/', validaJWT, function(req, res){
 
 	userController.list(function(resp){
 		res.json(resp);
