@@ -65,3 +65,4 @@ combined -
 ::1 - - [21/Jan/2016:04:05:16 +0000] "DELETE /api/users/569ecf451dfe96fb2075224e HTTP/1.1" 200 48 "-" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_11_3) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/47.0.2526.111 Safari/537.36"
 ::1 - - [21/Jan/2016:04:05:26 +0000] "DELETE /api/users/569ecf451dfe96fb2075224e HTTP/1.1" 401 55 "-" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_11_3) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/47.0.2526.111 Safari/537.36"
 ::1 - - [21/Jan/2016:04:05:31 +0000] "DELETE /api/users/569ecf451dfe96fb2075224e HTTP/1.1" 200 48 "-" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_11_3) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/47.0.2526.111 Safari/537.36"
+::1 - - [21/Jan/2016:04:13:01 +0000] "GET /api/users HTTP/1.1" 200 425 "-" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_11_3) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/47.0.2526.111 Safari/537.36"

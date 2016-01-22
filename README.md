@@ -22,7 +22,6 @@
     <li>express: "^4.13.3"</li>
     <li>mongoose: "^4.3.3"</li>
     <li>bcrypt-nodejs: "0.0.3",</li>
-    <li>oauth2-server: "^2.4.1" (Em andamento)</li>
     <li>validator: "^4.4.0"</li>
     <li>morgan: "^1.6.1"</li>
     <li>jwt-simple: "^0.4.1"</li>
