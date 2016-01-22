@@ -9,14 +9,12 @@
     <li>NPM</li>
 </ul>
 <br/>
-<small>Obs.:Todos instalados e funcionando corretamente.</small>
-
+<small>Obs.:Os serviços citados acima devem estar instalados e funcionando corretamente.</small>
 
 <h3>Instalação</h3>
 <p>Basta rodar o comando "npm install" na raiz do diretorio.</p>
 
 <h3>Dependências Utilizadas</h3>
-
 <ul>
 	<li>body-parser: "^1.14.2"</li>
     <li>express: "^4.13.3"</li>
