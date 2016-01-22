@@ -8,8 +8,8 @@ var loginController = require('../controller/loginController.js');
 //Logar
 router.post('/', function(req, res){
 
-	var email = validator.trim(validator.escape(req.param('email')));
-	var password = validator.trim(validator.escape(req.param('password')));
+	var email = validator.trim(validator.escape(req.body.email));
+	var password = validator.trim(validator.escape(req.body.password));
 
 
 	loginController.logar(email, password, function(resp){
