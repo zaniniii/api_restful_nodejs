@@ -93,3 +93,4 @@ combined -
 ::1 - - [25/Jan/2016:14:46:22 +0000] "POST /api/users HTTP/1.1" 200 212 "-" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_11_3) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/47.0.2526.111 Safari/537.36"
 ::1 - - [25/Jan/2016:14:46:43 +0000] "GET /api/users HTTP/1.1" 200 140 "-" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_11_3) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/47.0.2526.111 Safari/537.36"
 ::1 - - [25/Jan/2016:14:46:54 +0000] "GET /api/users/56a6353e03c45f0d55cf2d95 HTTP/1.1" 200 212 "-" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_11_3) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/47.0.2526.111 Safari/537.36"
+::1 - - [25/Jan/2016:19:08:36 +0000] "GET /api/users HTTP/1.1" 200 2 "-" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_11_3) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/47.0.2526.111 Safari/537.36"

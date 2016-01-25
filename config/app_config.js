@@ -20,9 +20,7 @@ var allowCors = function(req, res, next){
 var accessLogStream = fs.createWriteStream(__dirname + '/../log/access.log', {flags: 'a'});
 app.use(morgan('combined', {stream: accessLogStream}));
 
-var port = process.env.PORT || 8080;
-
-app.listen(port);
+app.listen(5000);
 app.use(allowCors);
 
 //Acionando o Json com BodyParse
