@@ -25,9 +25,3 @@
     <li>jwt-simple: "^0.4.1"</li>
     <li>moment: "^2.11.1"</li>
 </ul>
-
-
-<h3>Em desenvolvimento</h3>
-<ul>
-    <li>Criar arquivo de configuração</li>
-</ul>
