@@ -21,7 +21,6 @@
     <li>mongoose: "^4.3.3"</li>
     <li>bcrypt-nodejs: "0.0.3",</li>
     <li>validator: "^4.4.0"</li>
-    <li>morgan: "^1.6.1"</li>
     <li>jwt-simple: "^0.4.1"</li>
     <li>moment: "^2.11.1"</li>
 </ul>
