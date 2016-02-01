@@ -15,7 +15,7 @@ router.get('/', function(req, res){
 });
 
 //Adicionar Usuario
-router.post('/', function(req, res){
+router.post('/', validaJWT, function(req, res){
 
 	var name = validator.trim(validator.escape(req.body.name));
 	var email = validator.trim(validator.escape(req.body.email));
