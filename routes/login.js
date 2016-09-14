@@ -1,21 +1,33 @@
 var express = require('express');
 var router = express.Router();
-var validator = require('validator');
 
 //importo o controller Login
-var loginController = require('../controller/loginController.js');
+const loginController = require('../controller/loginController.js');
 
 //Logar
 router.post('/', function(req, res){
 
-	var email = validator.trim(validator.escape(req.body.email));
-	var password = validator.trim(validator.escape(req.body.password));
+	var email = req.body.email;
+	var password = req.body.password;
+	var device_id = req.body.device_id;
 
-
-	loginController.logar(email, password, function(resp){
+	loginController.logar(email, password, device_id, function(resp){
 		res.json(resp);
 	});
 });
+
+//Lembrar Senha
+router.post('/remember_password', function(req, res){
+
+	var email = req.body.email;
+
+	console.log(email);
+	loginController.remember_password(email, function(resp){
+		res.json(resp);
+	});
+
+});
+
 
 
 module.exports = router;

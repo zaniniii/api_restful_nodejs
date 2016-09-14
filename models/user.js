@@ -1,19 +1,35 @@
+'use strict';
 var mongoose = require('mongoose');
 var bcrypt = require('bcrypt-nodejs');
+var Schema = mongoose.Schema;
 
+var UserSchema = Schema({
 
-var UserSchema = new mongoose.Schema({
-		
 		name : {
 			type : String,
-			required : true
+			required : true,
+			index : true
 		},
 
 		email : {
 			type : String,
 			unique: true,
-		    required: true
+		    required: true,
+		    validate: [ /\S+@\S+\.\S/, 'Email inválido' ]
+		},
 
+		profile : {
+			type : String,
+			required : true,
+			index : true
+		},
+
+		avatar : {
+			type : String
+		},
+
+		cell_phone : {
+			type : String
 		},
 
 		password : {
@@ -29,7 +45,7 @@ var UserSchema = new mongoose.Schema({
 
 		created_at :{
 			type: Date,
-        	default: Date.now		
+        	default: Date.now
 		},
 
 		updated_at :{
@@ -39,12 +55,10 @@ var UserSchema = new mongoose.Schema({
 	});
 
 
-//Executa antes de salvar o usuário
+//Run before saving user
 UserSchema.pre('save', function(callback) {
 
-
   var user = this;
-
 
   if (!user.isModified('password')) return callback();
 
@@ -61,7 +75,6 @@ UserSchema.pre('save', function(callback) {
 
 
 UserSchema.methods.verifyPassword = function(password, cb) {
-
   bcrypt.compare(password, this.password, function(err, isMatch) {
     if (err) return cb(err);
     cb(null, isMatch);

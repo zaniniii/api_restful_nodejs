@@ -1,33 +1,32 @@
-<h1>Api Restful - NodeJS [v 0.0.1]</h1>
+# Api Restful [v 0.0.1] #
+API densenvolvida para estudos.
 
-<p>Api desenvolvida a titulo de estudos.</p>
+## Instalação ##
+##### Para quem utiliza o Docker #####
+Basta rodar os comandos:
+* docker-compose build
+* docker-compose up
 
-<h3>Requisitos</h3>
-<ul>
-    <li>MongoDB</li>
-    <li>Nodejs</li>
-    <li>NPM</li>
-</ul>
-<br/>
-<small>Obs.:Os serviços citados acima devem estar instalados e funcionando corretamente.</small>
+## Tecnologias ##
+* Nodejs
+* MongoDB
+* Docker
 
-<h3>Instalação</h3>
-<p>Basta rodar o comando "npm install" na raiz do diretorio.</p>
+## Dependências Utilizadas em Produção ##
 
-<h3>Dependências Utilizadas</h3>
-<ul>
-	<li>body-parser: "^1.14.2"</li>
-    <li>express: "^4.13.3"</li>
-    <li>mongoose: "^4.3.3"</li>
-    <li>bcrypt-nodejs: "0.0.3",</li>
-    <li>validator: "^4.4.0"</li>
-    <li>morgan: "^1.6.1"</li>
-    <li>jwt-simple: "^0.4.1"</li>
-    <li>moment: "^2.11.1"</li>
-</ul>
+* bcrypt-nodejs: "0.0.3"
+* body-parser: "^1.14.2"
+* compression: "^1.6.2"
+* consign: "^0.1.2"
+* express: "^4.13.3"
+* helmet: "^2.1.2"
+* jwt-simple: "^0.4.1"
+* moment: "^2.11.1"
+* mongoose: "^4.3.3"
+* node-base64-image: "^0.1.2"
+* slug: "^0.9.1"
+* xmlhttprequest: "^1.8.0
 
+## Dependências Utilizadas em Desenvolvimento ##
 
-<h3>Em desenvolvimento</h3>
-<ul>
-    <li>Criar arquivo de configuração</li>
-</ul>
+* nodemon: "^1.10.2"

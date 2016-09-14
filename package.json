@@ -1,24 +1,33 @@
 {
-  "name": "api_node_js",
+  "name": "apiRestful",
   "version": "0.0.1",
-  "description": "Exemplo Restful Node",
-  "main": "app.js",
+  "description": "Descrição da API",
+  "main": "index.js",
+
   "scripts": {
-    "start": "node app.js"
+    "start": "node index.js"
   },
+
   "keywords": [
-    "Restful"
+    "Api",
+    "Restful",
+    "MongoDB"
   ],
   "author": "Luiz Carlos Zanini <zanini@za9.com.br>",
   "license": "ISC",
   "dependencies": {
     "bcrypt-nodejs": "0.0.3",
     "body-parser": "^1.14.2",
+    "compression": "^1.6.2",
+    "consign": "^0.1.2",
     "express": "^4.13.3",
+    "helmet": "^2.1.2",
     "jwt-simple": "^0.4.1",
-    "moment": "^2.11.1",
     "mongoose": "^4.3.3",
-    "morgan": "^1.6.1",
-    "validator": "^4.4.0"
+    "node-base64-image": "^0.1.2",
+    "xmlhttprequest": "^1.8.0"
+  },
+  "devDependencies": {
+    "nodemon": "^1.10.2"
   }
 }
