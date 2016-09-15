@@ -28,6 +28,4 @@ router.post('/remember_password', function(req, res){
 
 });
 
-
-
 module.exports = router;

@@ -13,6 +13,7 @@
     "Restful",
     "MongoDB"
   ],
+
   "author": "Luiz Carlos Zanini <zanini@za9.com.br>",
   "license": "ISC",
   "dependencies": {
@@ -21,12 +22,15 @@
     "compression": "^1.6.2",
     "consign": "^0.1.2",
     "express": "^4.13.3",
+    "file-stream-rotator": "0.0.7",
     "helmet": "^2.1.2",
     "jwt-simple": "^0.4.1",
     "mongoose": "^4.3.3",
+    "morgan": "^1.7.0",
     "node-base64-image": "^0.1.2",
     "xmlhttprequest": "^1.8.0"
   },
+
   "devDependencies": {
     "nodemon": "^1.10.2"
   }

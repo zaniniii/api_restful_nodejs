@@ -34,6 +34,9 @@ router.get('/', auth, function(req, res){
   }
 
 	userController.list(function(resp){
+
+    console.log(resp);
+    
 		res.json(resp);
 	})
 

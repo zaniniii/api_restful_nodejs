@@ -1,11 +1,6 @@
-# Api Restful [v 0.0.1] #
+# Api Restful [v 0.0.2] #
 API densenvolvida para estudos.
 
-## Instalação ##
-##### Para quem utiliza o Docker #####
-Basta rodar os comandos:
-* docker-compose build
-* docker-compose up
 
 ## Tecnologias ##
 * Nodejs

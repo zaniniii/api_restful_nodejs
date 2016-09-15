@@ -1,18 +1,13 @@
 module.exports = {
-
   info : {
       api :  'Api Modelo',
-      version : 'v0.0.1'
+      version : 'v0.0.2'
   },
-
   database : {
-    host : 'mongodb://localhost:27017/apiRest',
+    host : 'mongodb://dbserver/apiRestful',
     user : '',
     password : ''
   },
-
   jwtToken : 'jwtTokenZa9',
-
   port : 3000
-
 }

@@ -1,6 +1,16 @@
 version: '2'
 services:
-  library:
+  MongoDB:
+    container_name: ApiRestful-MongoDB
+    image: mongo:latest
+    volumes:
+      - /data/db
+    ports:
+      - 28017:27017
+    restart: always
+
+  app:
+    container_name: ApiRestful
     build:
       context: .
       dockerfile: Dockerfile
@@ -10,5 +20,7 @@ services:
     ports:
       - 3000:3000
     volumes:
-     - .:/home/app/library
-     - /home/app/library/node_modules
+      - .:/home/app/library
+      - /home/app/library/node_modules
+    links:
+      - MongoDB:dbserver
