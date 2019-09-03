@@ -1,11 +1,20 @@
-var app = require('./config/app.js');
+// Modulos
+require('dotenv').config()
+const express = require('express')
+const consign = require('consign')
+const app = express()
 
-//Routes
-var index = require('./routes/index'),
-    login = require('./routes/login'),
-    users = require('./routes/users');
+consign({
+  verbose: false,
+  cwd: 'src',
+  loggingType: 'info',
+  locale: 'pt-br'
+}).include('config/middlewares.js').then('controllers').then('routes').into(app)
+app.listen(process.env.PORT, () => {
+  console.log(`API ${process.env.API_NAME} Started - PORT: ${process.env.PORT}`)
+})
 
-//URL's
-app.use('/', index);
-app.use('/login', login);
-app.use('/users', users);
+// Pasta publica
+app.use(express.static('src/public'))
+
+module.exports = app

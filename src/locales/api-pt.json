@@ -1,0 +1,17 @@
+{
+	"email_invalid": "email_invalid",
+	"fail_athenticated_token": "fail_athenticated_token",
+	"user_not_found": "user_not_found",
+	"removed_user_success": "removed_user_success",
+	"add_cliente_success": "add_cliente_success",
+	"client_not_found": "client_not_found",
+	"usernot_found": "usernot_found",
+	"field_required": "field_required",
+	"your_password_has_been_changed_successfully": "your_password_has_been_changed_successfully",
+	"this_email_exists": "this_email_exists",
+	"login_invalid": "login_invalid",
+	"login": "login",
+	"facebook_id_required": "facebook_id_required",
+	"send_email_remember_password": "send_email_remember_password",
+	"current_invalid_password": "current_invalid_password"
+}

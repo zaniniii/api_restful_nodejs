@@ -1,37 +1,48 @@
 {
-  "name": "apiRestful",
-  "version": "0.0.1",
-  "description": "Descrição da API",
+  "name": "modeloapi",
+  "version": "1.2.0",
+  "description": "Modelo de api para ser utilizado nos projetos desenvolvidoso pela Za9.",
   "main": "index.js",
-
   "scripts": {
-    "start": "node index.js"
+    "start": "node index.js",
+    "dev": "nodemon index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
-
   "keywords": [
-    "Api",
-    "Restful",
+    "API",
+    "RestFull",
+    "NodeJS",
     "MongoDB"
   ],
-
-  "author": "Luiz Carlos Zanini <zanini@za9.com.br>",
+  "author": "Za9",
   "license": "ISC",
   "dependencies": {
-    "bcrypt-nodejs": "0.0.3",
-    "body-parser": "^1.14.2",
-    "compression": "^1.6.2",
+    "bcryptjs": "^2.4.3",
+    "body-parser": "^1.18.2",
+    "cloudinary": "^1.13.2",
+    "compression": "^1.7.3",
     "consign": "^0.1.2",
-    "express": "^4.13.3",
+    "dotenv": "^4.0.0",
+    "email-templates": "^3.1.8",
+    "express": "^4.16.4",
     "file-stream-rotator": "0.0.7",
-    "helmet": "^2.1.2",
-    "jwt-simple": "^0.4.1",
-    "mongoose": "^4.3.3",
-    "morgan": "^1.7.0",
-    "node-base64-image": "^0.1.2",
+    "helmet": "^3.15.1",
+    "i18n": "^0.8.3",
+    "jsonwebtoken": "^8.5.0",
+    "mongoose": "^5.4.17",
+    "morgan": "^1.9.1",
+    "nodemailer": "^2.7.2",
+    "pug": "^2.0.0-rc.4",
+    "simple-onesignal": "^1.0.4",
+    "type-of-is": "^3.5.1",
     "xmlhttprequest": "^1.8.0"
   },
-
   "devDependencies": {
-    "nodemon": "^1.10.2"
+    "eslint": "^5.15.1",
+    "eslint-config-standard": "^12.0.0",
+    "eslint-plugin-import": "^2.16.0",
+    "eslint-plugin-node": "^8.0.1",
+    "eslint-plugin-promise": "^4.0.1",
+    "eslint-plugin-standard": "^4.0.0"
   }
 }
