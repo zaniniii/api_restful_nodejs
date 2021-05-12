@@ -31,7 +31,7 @@
     "jsonwebtoken": "^8.5.0",
     "mongoose": "^5.7.5",
     "morgan": "^1.9.1",
-    "nodemailer": "^2.7.2",
+    "nodemailer": "^6.4.16",
     "pug": "^2.0.0-rc.4",
     "simple-onesignal": "^1.0.4",
     "type-of-is": "^3.5.1",
